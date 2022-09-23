@@ -10,6 +10,7 @@ def dinner(request, name):
     context = {
         'pick' : pick,
         'name' : name,
+        'menus' : menus
     }
     
     return render(request, 'dinner.html', context)
