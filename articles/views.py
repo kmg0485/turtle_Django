@@ -40,5 +40,7 @@ def detail(request, pk):
     
 def delete(request, pk):
     article = Article.objects.get(pk=pk)
-    article.delete() 
+    
+    if request.method == "POST":
+        article.delete() 
     return redirect('articles:dinner')
